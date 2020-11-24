@@ -20,9 +20,11 @@ const TimerSky = () => {
 
      useEffect(() => {
        let interval = null;
-       if (isActive) {
+       if (true) {
          interval = setInterval(() => {
+
            setSeconds(seconds => seconds + 1);
+           console.log("Seconds: " + seconds);
          }, 1000);
        } else if (!isActive && seconds !== 0) {
          clearInterval(interval);
@@ -34,7 +36,7 @@ const TimerSky = () => {
 
       <Sky
         distance = {200}
-        inclination={this.seconds/1000} // Sun elevation angle from 0 to 1 (default=0)
+        inclination={seconds/1000} // Sun elevation angle from 0 to 1 (default=0)
         azimuth={0.25} // Sun rotation around the Y axis from 0 to 1 (default=0.25)
         turbidity = {10}
         rayleigh = {2.376}
