@@ -6,13 +6,10 @@ import YogaCards from './YogaCards';
 import Resources from './Resources';
 import Team from './Team';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Audio } from 'spacesvr';
-import { Vector3 } from 'three';
 
 function App() {
   return (
     <div className="app">
-      <Audio url="lofi.mp3" position={new Vector3(0, 4, 0)} />
       <Router>
         <Header />
         <Switch>

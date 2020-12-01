@@ -14,7 +14,7 @@ function App() {
       <ambientLight />
       <TimerSky />
       <RealIsland />
-      {/* <Audio url="lofi.mp3" position={new Vector3(0, 4, 0)} /> */}
+      <Audio url="lofi.mp3" position={new Vector3(0, 4, 0)} />
 
       <Floor />
     </StandardEnvironment>
