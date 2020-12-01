@@ -1,26 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import { Vector3, TextureLoader,RepeatWrapping } from "three";
-import {useLoader} from "react-three-fiber"
-import { StandardEnvironment, Background, Logo } from "spacesvr";
-import Floor from "./components/Floor"
-import TimerSky from "./components/TimerSky"
-import {Sky} from "@react-three/drei"
-import RealIsland from "./models/RealIsland"
-
+import React from 'react';
+import './style/App.css';
+import Header from './Header';
+import Free3d from './Free3d';
+import YogaCards from './YogaCards';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
-
   return (
-      <StandardEnvironment player={{ pos: new Vector3(5, 1, 0), rot: Math.PI}}>
-
-        <ambientLight />
-
-        <TimerSky/>
-        <RealIsland/>
-
-        <Floor/>
-      </StandardEnvironment>
+    //BEM class naming convention
+    <Router>
+      <div className="app">
+        <Header />
+        <Switch>
+          <Route path="/YogaCards" component={YogaCards} />
+          <Route path="/" exact component={Free3d} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
