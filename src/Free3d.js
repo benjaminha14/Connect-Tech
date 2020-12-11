@@ -8,7 +8,7 @@ import { Sky } from '@react-three/drei';
 import RealIsland from './models/RealIsland';
 import TimerSky from './components/TimerSky';
 
-function App() {
+function Free3d() {
   return (
     <StandardEnvironment player={{ pos: new Vector3(5, 1, 0), rot: Math.PI }}>
       <ambientLight />
@@ -21,4 +21,4 @@ function App() {
   );
 }
 
-export default App;
+export default Free3d;
